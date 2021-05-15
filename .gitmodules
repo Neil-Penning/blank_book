@@ -1,0 +1,3 @@
+[submodule "PenningTeX"]
+	path = PenningTeX
+	url = git@github.com:Neil-Penning/PenningTeX.git
