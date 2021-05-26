@@ -13,21 +13,17 @@ cd $1
 git remote rename origin blank
 
 # add intended origin
+echo "adding remote"
 git remote add origin git@github.com:Neil-Penning/$1.git
 
 #remove script file
 git rm init_from_blank
 
 #rename placeholder folders
-git mv 0000.code-workspace $1.code-workspace
+git mv 0000.tex $1.tex
 
 #commit changes
 git commit -m "rename to $1"
-
-
-#find .tmp files and remove them
-find . | grep .tmp | xargs git rm
-git commit -m "removed folder tmp files"
 
 #Push to intended origin
 git push --set-upstream origin master
